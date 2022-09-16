@@ -1,8 +1,7 @@
 # this is a comment #
 class MainController < ApplicationController
   def index
-  end
-
-  def new
+    flash[:notice] = 'Logged in successfully'
+    flash[:alert] = 'Invalid email or password'
   end
 end

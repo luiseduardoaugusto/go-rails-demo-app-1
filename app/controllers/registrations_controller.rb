@@ -19,5 +19,4 @@ class RegistrationsController < ApplicationController
   def user_params
     params.required(:user).permit(:email, :password, :password_confirmation)
   end
-
 end

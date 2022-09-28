@@ -3,7 +3,7 @@ class PasswordResetsController < ApplicationController
   end
 
   def create
-    @user = user.find_by(email: params[:email])
+    @user = User.find_by(email: params[:email])
 
     if @user.present?
       #send mail
@@ -11,5 +11,11 @@ class PasswordResetsController < ApplicationController
     end
 
     redirect_to root_path, notice: 'si existe el usuario, se enviará un correo electrónico'
+  end
+
+  private
+
+  def params
+    
   end
 end
